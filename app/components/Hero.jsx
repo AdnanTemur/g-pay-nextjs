@@ -22,8 +22,8 @@ export const Hero = () => {
             }
         ],
         merchantInfo: {
-            merchantId: "12345678901234567890",
-            merchantName: "Demo Merchant"
+            merchantId: "BCR2DN4T5HY5H2C4",
+            merchantName: "ImagiForge"
         },
         transactionInfo: {
             totalPriceStatus: "FINAL",
@@ -34,11 +34,6 @@ export const Hero = () => {
         }
     };
 
-    const [buttonColor, setButtonColor] = useState("default");
-    const [buttonType, setButtonType] = useState("buy");
-    const [buttonSizeMode, setButtonSizeMode] = useState("static");
-    const [buttonWidth, setButtonWidth] = useState(240);
-    const [buttonHeight, setButtonHeight] = useState(40);
     return (
         <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
             <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
@@ -60,7 +55,7 @@ export const Hero = () => {
 
                     <button type="button" className="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-teal-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                            <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                         </svg>
 
                         Menu
@@ -80,14 +75,14 @@ export const Hero = () => {
                             >
                                 <GooglePayButton
                                     environment="TEST"
-                                    buttonColor={buttonColor}
-                                    buttonType={buttonType}
-                                    buttonSizeMode={buttonSizeMode}
+                                    buttonColor="black"
+                                    buttonType="buy"
+                                    buttonSizeMode="fill"
                                     paymentRequest={paymentRequest}
                                     onLoadPaymentData={paymentRequest => {
                                         console.log("load payment data", paymentRequest);
                                     }}
-                                    style={{ width: buttonWidth, height: buttonHeight }}
+                                    style={{ width: '100%', height: 'auto' }}
                                 />
                             </span>
                         </div>
